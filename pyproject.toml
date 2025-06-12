@@ -8,6 +8,8 @@ description = "Function that returns all points within radius r from a given poi
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+  "ipykernel>=6.29.5",
+  "matplotlib>=3.10.3",
   "shapely",
 ]
 classifiers = [
