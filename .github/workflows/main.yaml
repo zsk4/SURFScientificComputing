@@ -1,9 +1,7 @@
 # Github Workflow, set to run on push to Github
 
 name: Code Checks
-on: 
-  push:
-  pull_request:
+on: [push, pull_request]
   
 jobs:
   tests:
@@ -23,14 +21,14 @@ jobs:
     - name: Install uv
     - uses: astral-sh/setup-uv@v2
     
-    - name: Set up Puthon ${{ matrix.python-version}}
+    - name: Set up Python ${{ matrix.python-version}}
     - run: uv python install ${{ matrix.python-version }}
 
     - name: Install virtual environment
     - run: uv venv
 
     - name: Install dependencies
-    - run: uv sync -dev
+    - run: uv sync --dev
 
     - name: Run tests
     - run: uv run coverage run -m pytest -m "not slow"
