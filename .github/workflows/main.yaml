@@ -2,8 +2,8 @@
 
 name: Code Checks
 on: 
-  push
-  pull_request
+  push:
+  pull_request:
   
 jobs:
   tests:
