@@ -1,7 +1,8 @@
 # SURF Scientific Computing
 
 Introduction to scientific computing code design and best practices through an activity editing poorly-written code.
-Quick overview og some tools and workflows research software engineers use when programming. Hopefully some may be useful to integrate into your own research code.
+Quick overview of some tools and workflows research software engineers use when programming. Hopefully some may be useful to integrate into your own research code.
+Updated for Summer 2025 using uv instead of conda.
 
 This repository is based on my experience at INTERSECT Bootcamp 2024 and modules on the INTERSECT [website](https://intersect-training.org/curriculum/), and the United States Research Software Engineer (US-RSE) association.
 
