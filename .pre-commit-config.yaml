@@ -1,0 +1,41 @@
+# Configuration file for tests to run before commiting
+
+repos:
+  # Basic pre-commit tasks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v4.6.0"
+    hooks:
+      - id: check-added-large-files
+        args: ['--maxkb=8000']
+      - id: check-case-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+
+  # Ruff linter and formatter
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.5.4
+    hooks:
+      # Run the linter.
+      - id: ruff
+        types_or: [ python, pyi, jupyter ]
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
+        types_or: [ python, pyi, jupyter ]
+
+  # MyPy type checker
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: "v1.11.0"
+    hooks:
+      - id: mypy
+        additional_dependencies: [numpy, pandas, pandas-stubs]
+        files: src
+        #args: [--strict, --ignore-missing-imports]
+
+  # UV lock  
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    
+    rev: 0.7.2
+    hooks:
+      - id: uv-lock

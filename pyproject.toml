@@ -1,0 +1,44 @@
+[project]
+name = "surfscientificcomputing"
+version = "0.1.0"
+authors = [
+  { name="Zachary Katz", email="zachary_katz@mines.edu" },
+]
+description = "Function that returns all points within radius r from a given point"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "shapely",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+
+# Configuration file for pre-commit tests and packaging
+
+# Configrations if package were to be built and published to PyPi
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "coverage"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+# Ruff Linter
+[tool.ruff]
+src = ["src"]
+extend-include = ["*.ipynb"]
+
+# Use Numpy-style docstrings.
+[tool.ruff.lint]
+select = ["D"]
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
