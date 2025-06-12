@@ -23,12 +23,6 @@ classifiers = [
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[project.optional-dependencies]
-dev = [
-    "pytest",
-    "coverage"
-]
-
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
 
@@ -42,3 +36,9 @@ extend-include = ["*.ipynb"]
 select = ["D"]
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.1",
+]

@@ -31,7 +31,4 @@ jobs:
       run: uv sync --dev
 
     - name: Run tests
-      run: uv run coverage run -m pytest -m "not slow"
-      
-    - name: Generate coverage report
-      run: uv run coverage report --show-missing
+      run: uv run pytest --cov=. --cov-report=term-missing

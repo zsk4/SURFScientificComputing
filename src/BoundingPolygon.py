@@ -44,3 +44,19 @@ class BoundingPolygon:
         """
         assert len(points) > 0, "List of points must not be empty."
         return self.box.contains(shapely.points(points))
+
+    def onPolygon(self, points: list[tuple]) -> list[bool]:
+        """Determine if points are on the boundary of the polygon.
+
+        Parameters
+        ----------
+        points : list[tuple]
+            List of tuples representing points to check.
+
+        Returns
+        -------
+        list[bool]
+            List of bools, true if point is on box.
+        """
+        assert len(points) > 0, "List of points must not be empty."
+        return self.box.touches(shapely.points(points))
