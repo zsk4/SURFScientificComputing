@@ -1,17 +1,6 @@
 # Configuration file for tests to run before commiting
 
 repos:
-  # Basic pre-commit tasks
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v4.6.0"
-    hooks:
-      - id: check-added-large-files
-        args: ['--maxkb=8000']
-      - id: check-case-conflict
-      - id: check-yaml
-      - id: end-of-file-fixer
-      - id: mixed-line-ending
-
   # Ruff linter and formatter
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.5.4

@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = [
   { name="Zachary Katz", email="zachary_katz@mines.edu" },
 ]
-description = "Function that returns all points within radius r from a given point"
+description = "Example coding tasks for SURF 2025"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -16,9 +16,6 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
 ]
-
-
-# Configuration file for pre-commit tests and packaging
 
 # Configrations if package were to be built and published to PyPi
 [build-system]

@@ -3,7 +3,7 @@ Test if points are in a given bounding polygon using shapely.
 
 Zachary Katz
 zachary_katz@mines.edu
-September 2024
+June 2025
 
 Functions
 ---------
@@ -21,7 +21,7 @@ class BoundingShape:
         """Initialize anything common to all bounding shapes."""
         self.shape = shapely.geometry.Polygon()
 
-    def inShape(self, points: list[tuple]) -> None:
+    def inShape(self, points: list[tuple]) -> list[bool]:
         """Determine if points are in (not on the boundary) of the shape.
 
         Parameters
