@@ -22,4 +22,4 @@ def test_inPolygon():
     box = BoundingShape.Polygon([(0, 0), (0, 1), (1, 1), (1, 0), (0, 0)])
     points = [(0, 0)]
     print(box.inShape(points))
-    np.testing.assert_array_equal(box.inShape(points), [False])
+    np.testing.assert_array_equal(box.inShhape(points), [False])
